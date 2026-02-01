@@ -1,14 +1,123 @@
 <!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Hello World</title>
-  <link href='/style.css' rel='stylesheet'>
-</head>
-<body>
-  <h1>Hello, world!</h1>
-  <button onclick="console.log('hello');">Press me</button>
-  <script defer type="text/javascript" src="/main.js"></script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Happy Birthday! 🎂</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Kaushan+Script&family=Quicksand:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Confetti Canvas -->
+    <canvas id="confetti-canvas"></canvas>
+
+    <!-- Intro Screen -->
+    <div class="intro-screen" id="introScreen">
+      <div class="intro-text">something special for u~</div>
+      <button class="start-btn" onclick="startExperience()">open it ✨</button>
+    </div>
+
+    <!-- Music Control -->
+    <div class="music-control" onclick="toggleMusic()">
+      <span class="music-icon" id="musicIcon">🔊</span>
+    </div>
+
+    <!-- Hidden Audio Element -->
+    <audio id="bgMusic" loop>
+      <!-- CUSTOMIZABLE: Replace with actual music file -->
+      <!-- <source src="your-music-file.mp3" type="audio/mpeg"> -->
+    </audio>
+
+    <!-- Main Content -->
+    <div class="container">
+      <!-- Hero Section -->
+      <section class="section hero">
+        <h1 class="birthday-title">Happy Birthday</h1>
+        <div class="name" id="birthdayName">SARAH</div>
+        <div class="age-badge">🎂 Turning 21 🎂</div>
+      </section>
+
+      <!-- Photo Gallery -->
+      <section class="section">
+        <div class="glass-card">
+          <h2>our fave memories 📸</h2>
+          <div class="photo-gallery">
+            <!-- CUSTOMIZABLE: Replace with actual photos -->
+            <div class="photo-card">
+              <img
+                src="assets/image-1.jpg"
+                alt="Memory 1"
+              />
+            </div>
+            <div class="photo-card">
+              <img
+                src="assets/image-2.jpg"
+                alt="Memory 2"
+              />
+            </div>
+            <div class="photo-card">
+              <img
+                src="assets/image-3.jpg"
+                alt="Memory 3"
+              />
+            </div>
+            <div class="photo-card">
+              <img
+                src="assets/image-4.jpg"
+                alt="Memory 4"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Birthday Message -->
+      <section class="section">
+        <div class="glass-card message-box">
+          <h2>hey sarah 💕</h2>
+          <p>
+            happiest birthday to youuuu!! honestly can't believe you're 21
+            already like wtf 😭 this year is gonna be your year i can feel it!!
+          </p>
+          <p>
+            thank you for being literally the best person ever and for always
+            being there when i need u. all those late night talks, random
+            adventures, and inside jokes mean everything to me fr 🥺
+          </p>
+          <p>
+            can't wait to make more memories with u this year! let's goooo 🎉
+          </p>
+          <p class="signature">
+            love u sm,<br />
+            <strong>ur bestie forever</strong> ✨
+          </p>
+        </div>
+      </section>
+
+      <!-- Wishes Section -->
+      <section class="section">
+        <div class="glass-card">
+          <h2>birthday wishes 🌟</h2>
+          <div class="wishes-list">
+            <p>✨ manifest everything u want this year</p>
+            <p>💖 keep being the amazing human u are</p>
+            <p>🌈 more adventures together plsss</p>
+            <p>🎊 this is YOUR year bestie!</p>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+  </body>
 </html>
